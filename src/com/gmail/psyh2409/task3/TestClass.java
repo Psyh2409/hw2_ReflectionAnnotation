@@ -2,21 +2,21 @@ package com.gmail.psyh2409.task3;
 
 import com.gmail.psyh2409.task1.Test;
 
-public class Test_Class {
+public class TestClass {
     public String p = "Test string";
     @Save
     private int y = 7;
     @Save
     protected int z = 8;
 
-    public Test_Class() {
+    public TestClass() {
     }
 
-    public Test_Class(int a) {
+    public TestClass(int a) {
         this.y = a;
     }
 
-    public Test_Class(int a, int b) {
+    public TestClass(int a, int b) {
         this.y = a;
         this.z = b;
     }

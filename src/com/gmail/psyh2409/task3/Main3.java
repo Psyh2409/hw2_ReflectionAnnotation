@@ -5,7 +5,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
 public class Main3 {
-    private static void customSerialize(Test_Class object, String annotationName, String fileName){
+    private static void customSerialize(TestClass object, String annotationName, String fileName){
         String separator = "==============================================================================";
         if (object != null
                 && annotationName != null && !annotationName.isEmpty()
@@ -46,7 +46,7 @@ public class Main3 {
         }
     }
 
-    private static void customDeSerialize(Test_Class object, String fileName){
+    private static void customDeSerialize(TestClass object, String fileName){
         String separator = "";
         if (object != null && fileName != null && !fileName.isEmpty()) {
             File file = new File(fileName);
@@ -80,8 +80,8 @@ public class Main3 {
     }
 
     public static void main(String[] args) {
-        customSerialize(new Test_Class(), "Save", "field.txt");
-        Test_Class test_class = new Test_Class(100, 500);
+        customSerialize(new TestClass(), "Save", "field.txt");
+        TestClass test_class = new TestClass(100, 500);
         System.out.println(test_class);
         customDeSerialize(test_class, "field.txt");
         System.out.println(test_class);
